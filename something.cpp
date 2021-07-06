@@ -26,9 +26,6 @@ public:
 
 	MyClass(const MyClass & other)
 	{
-		std::cout << "Called copy constructor";
-		delete [] this->a;
-		
 		for(size_t i = 0; i < SIZE; ++i)
 		{
 			this->a[i] = other.a[i];
@@ -63,9 +60,6 @@ public:
 
 	void operator=(const MyClass & other)
 	{
-		std::cout << "Called overloaded =: " << this << std::endl;
-		delete [] this->a;
-
 		for(size_t i = 0; i < SIZE; ++i)
 		{
 			this->a[i] = other.a[i];
